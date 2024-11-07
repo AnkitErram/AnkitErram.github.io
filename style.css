@@ -12,7 +12,7 @@
   --accent-main-color: #FFD700;
   --accent-shade-color: #CCAC00;
   --accent-tint-color: #FFE066;
-  --accent-color-semi-transparent: #ff875925;
+  --accent-color-semi-transparent: #ff88594a;
   --bg-color2: #bb340a;
 }
 
@@ -38,7 +38,7 @@ body {
 
 section {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 40%;
   margin: 0 auto;
   text-align: center;
   color: var(--text-color);
@@ -53,7 +53,7 @@ h1 {
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--primary-tint-color);
+  border-bottom: 2px solid var(--accent-tint-color);
   display: inline-block;
 }
 
@@ -67,12 +67,16 @@ h2 {
 
   background-image: url('images/stacked-waves.svg');
   aspect-ratio: 960/540;
-  width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+.stacked-wave svg {
+  width: 100%;
+  height: auto;
+  display: block; 
+}
 
 #welcome {
   text-align: center;
@@ -109,10 +113,10 @@ h2 {
 
 /* About section */
 #about {
-  background-color: var(--secondary-color-semi-transparent);
-  border-radius: 10px;
+  background-color: var(--secondary-main-color);
   margin-top: 2rem;
   padding: 2rem;
+  border-radius: 1rem;
 }
 #about p {
   text-align: left;
@@ -128,10 +132,9 @@ h2 {
   display: flex;
   align-items: center;
   text-align: left;
-  background-color: var(--main-color-semi-transparent);
+  /* background: #1c1c1c; */
   margin-bottom: 1.5rem;
-  border: 2px solid var(--accent-main-color);
-  --borderWidth: 3px;
+  /* border: 3px solid rgba(0, 0, 0, 0.409); */
   position: relative;
   border-radius: 10px;
   color: var(--text-color);
@@ -163,7 +166,7 @@ h2 {
 }
 
 .project img {
-  width: 30rem;
+  width: 55%;
   margin: 0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -187,7 +190,7 @@ h2 {
 }
 
 .project a:hover {
-  background-color: var(--main-color-semi-transparent);
+  background-color: var(--accent-color-semi-transparent);
   font-weight: 500;
 }
 
@@ -217,7 +220,7 @@ html {
   scrollbar-color: var(--primary-main-color) var(--bg-color2);
 }
 
-/* Navbar styling */
+/* Navbar */
 nav {
   background-color: var(--bg-color2);
   padding-bottom: 0.2rem;
@@ -225,7 +228,7 @@ nav {
   top: 0;
   position: sticky;
   z-index: 10;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); */
 }
 
 nav ul {
