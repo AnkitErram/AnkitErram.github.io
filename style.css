@@ -45,7 +45,7 @@ section {
   margin: 0 auto;
   text-align: center;
   color: var(--text-color);
-
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
@@ -65,7 +65,6 @@ h2 {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -74,6 +73,7 @@ h2 {
   background-position: center;
   text-align: left;
   background-size:cover;
+  color: var(--text-color);
 }
 
 #welcome-content {
@@ -94,11 +94,6 @@ h2 {
   width: 100%;
   height: auto;
   display: block;
-}
-
-#welcome {
-  text-align: center;
-  color: var(--text-color);
 }
 
 #welcome p {
@@ -130,6 +125,28 @@ h2 {
   font-weight: 500;
 }
 
+@media only screen and (max-width: 768px) {
+  /* TODO get rid of bottom its just used for testing */
+  #welcome img {
+    margin-top: 1rem;
+    width: 12rem;
+    border: var(--accent-color-semi-transparent) 0.5rem solid;
+  }
+  #welcome {
+    flex-direction: column;
+    justify-content:start;
+    
+    background-image: url('images/orange-waves-phone.svg');
+  }
+  #welcome-content {
+    margin-left: 1rem;
+    align-items: center;
+  }
+  #welcome h1 {
+    text-align: center;
+  }
+
+}
 /* About section */
 #about {
   background-color: var(--bg-color2);
@@ -253,14 +270,19 @@ html {
 
 /* Navbar */
 nav {
-  background-color: var(--bg-color2);
+  background-color: var(--primary-main-color);
   padding-bottom: 0.2rem;
   padding-top: 0.2rem;
   top: 0;
   position: sticky;
   z-index: 10;
   margin: 0;
-  /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); */
+}
+
+nav.navbar-changed{
+  background-color: var(--bg-color2);
+  transition: background-color 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -291,15 +313,22 @@ nav a::after {
   height: 2px;
   display: block;
   right: 0;
-  background: var(--primary-main-color);
+  background: var(--bg-color2);
   transition: width 0.3s ease;
   -webkit-transition: width 0.3s ease;
+}
+
+nav.navbar-changed a::after {
+  background: var(--primary-main-color);
 }
 
 nav a:hover::after {
   width: 100%;
   left: 0;
   height: 0.2rem;
+  background: var(--bg-color2);
+}
+nav.navbar-changed a:hover::after {
   background: var(--primary-main-color);
 }
 
