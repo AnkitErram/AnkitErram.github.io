@@ -7,11 +7,7 @@
   --primary-shade-color: #ad5400;
   --primary-tint-color: #da6900;
   --accent-main-color: #a34f00;
-
-
   --primary-main-color-transparent: #CC620069;
-  --accent-shade-color: #CCAC00;
-  --accent-tint-color: #FFE066;
   --accent-color-semi-transparent: #ff88594a;
 }
 ::selection {
@@ -74,6 +70,7 @@ h2 {
   text-align: left;
   background-size:cover;
   color: var(--text-color);
+  gap: 2rem;
 }
 
 #welcome-content {
@@ -114,7 +111,6 @@ h2 {
   background-color: transparent;
   padding: 0.5rem 1rem;
   border: solid var(--primary-main-color) 1px;
-  margin-left: 1rem;
   border-radius: 4px;
   transition: all 0.5s;
 
@@ -125,8 +121,32 @@ h2 {
   font-weight: 500;
 }
 
+#socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+#socials a {
+  border: none;
+  padding: 0;
+  opacity: 0.7;
+}
+#socials a img{
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  border-radius: 0%;
+  margin: 0;
+  width: 2.3rem;
+  height: auto;
+}
+
+#socials a:hover {
+  background-color: transparent;
+  opacity: 1;
+  scale: 1;
+}
 @media only screen and (max-width: 768px) {
-  /* TODO get rid of bottom its just used for testing */
   #welcome img {
     margin-top: 1rem;
     width: 12rem;
@@ -161,6 +181,7 @@ h2 {
 #about h1 {
   text-align: left;
 }
+
 /* Skills section */
 
 #skills {
@@ -169,6 +190,35 @@ h2 {
   margin-top: 2rem;
   border-radius: 1rem;
 }
+
+.skills-boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.skills-box {
+  margin: 0;
+  border: var(--primary-shade-color) 2px solid;
+  border-radius: 1rem;
+  background-color: #202020;
+}
+
+.skills-box h1 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+
+.skills-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+
 /* Projects section */
 #projects {
   background-color: var(--bg-color2);
