@@ -382,6 +382,7 @@ button {
   font-weight: 500;
   margin-top: 1rem;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 button:hover {
