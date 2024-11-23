@@ -26,20 +26,41 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isDeleting && index < currentRole.length) {
             index++;
             speed = 80;
+            document.body.classList.add('typing');
         } else if (isDeleting && index > 0) {
             index--;
             speed = 20;
+            document.body.classList.add('typing');
         } else if (!isDeleting && index === currentRole.length) {
             isDeleting = true;
             // Pause before deleting
-            speed = 2000; 
+            speed = 2000;
+            document.body.classList.remove('typing');
         } else if (isDeleting && index === 0) {
             isDeleting = false;
             roleIndex = (roleIndex + 1) % roles.length;
             // Pause before typing again
-            speed = 500; 
+            speed = 500;
+            document.body.classList.remove('typing'); 
         }
         setTimeout(type, speed);
     }
     type();
 });
+
+function readMore1() {
+    const dots = document.getElementById("dots1");
+    const moreText = document.getElementById("more1");
+    const btnText = document.getElementById("readBtn1");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
+    }
+  }
+  
