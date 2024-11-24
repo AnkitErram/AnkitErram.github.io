@@ -96,7 +96,7 @@ svg {
 
 #welcome p {
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 300;
   margin-top: 0%;
   margin-bottom: 0.5rem;
 }
@@ -177,6 +177,7 @@ svg {
 }
 /* About section */
 #about {
+  max-width: 35%;
   background-color: var(--bg-color2);
   margin-top: 2rem;
   padding: 2rem;
@@ -248,39 +249,6 @@ svg {
   font-weight: 500;
 }
 
-@media only screen and (max-width: 768px) {
-  #welcome img {
-    margin-top: 1rem;
-    width: 12rem;
-    border: var(--accent-color-semi-transparent) 0.5rem solid;
-  }
-  #welcome {
-    flex-direction: column;
-    justify-content: start;
-
-    background-image: url("images/orange-waves-phone.svg");
-  }
-  #welcome-content {
-    width: auto;
-    margin-left: 1rem;
-    align-items: center;
-  }
-  #welcome h1 {
-    text-align: center;
-    font-size: 1rem;
-  }
-  #welcome p {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 300;
-  }
-  #welcome a {
-    margin-top: 2rem;
-  }
-  .skills-boxes {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* Projects section */
 #projects {
@@ -319,7 +287,6 @@ svg {
   color: var(--primary-tint-color);
   font-size: 1.4rem;
   margin: 0;
-  text-align: start;
   font-weight: 790;
 }
 
@@ -370,6 +337,102 @@ svg {
 
 #more1 {
   display: none;
+}
+
+@media only screen and (max-width: 1500px) {
+  #about {
+    max-width: 50%;
+  }
+
+  #projects {
+    max-width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  #about {
+    max-width: 60%;
+  }
+
+  #projects {
+    max-width: 70%;
+  }
+
+  #welcome h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  #about {
+    max-width: 80%;
+  }
+
+  #projects {
+    max-width: 80%;
+  }
+  .project {
+    flex-direction: column;
+  }
+
+  .project:hover {
+    transition: none;
+    scale: 1;
+  }
+  
+  .project img {
+    width: 100%;
+    margin-top: 1rem; 
+    border-radius: 10px; 
+  }
+
+  .project-content {
+    text-align: center;
+  }
+  .project-content ul {
+    justify-content: center;
+  }
+  #welcome h1 {
+    font-size: 1rem;
+  }
+
+}
+@media only screen and (max-width: 768px) {
+  #welcome img {
+    margin-top: 1rem;
+    width: 12rem;
+    border: var(--accent-color-semi-transparent) 0.5rem solid;
+  }
+  #welcome {
+    flex-direction: column;
+    justify-content: start;
+
+    background-image: url("images/orange-waves-phone.svg");
+  }
+  #welcome-content {
+    width: auto;
+    margin-left: 1rem;
+    align-items: center;
+  }
+  #welcome h1 {
+    text-align: center;
+    font-size: 1rem;
+  }
+  #welcome p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  #welcome a {
+    margin-top: 2rem;
+  }
+  .skills-boxes {
+    grid-template-columns: 1fr;
+  }
+
+  #projects {
+    max-width: 60%;
+  }
 }
 
 button {
