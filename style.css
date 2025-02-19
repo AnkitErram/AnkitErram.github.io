@@ -257,13 +257,13 @@ svg {
   padding-right: 3.5rem;
   margin-top: 2rem;
   border-radius: 1rem;
-  max-width: 45%;
+  max-width: 55%;
 }
 #projects h2 {
   margin-bottom: 2rem;
 }
 .project {
-  padding-left: 1rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
   text-align: left;
@@ -338,6 +338,10 @@ svg {
 #more1 {
   display: none;
 }
+#more2 {
+  display: none;
+}
+
 
 @media only screen and (max-width: 1500px) {
   #about {
