@@ -80,3 +80,19 @@ function readMore1() {
     }
   }
   
+  function readMore3() {
+    const dots = document.getElementById("dots3");
+    const moreText = document.getElementById("more3");
+    const btnText = document.getElementById("readBtn3");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
+    }
+  }
+  
